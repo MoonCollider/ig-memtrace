@@ -15,18 +15,18 @@ namespace MemTraceTool
 
   sealed class TreePerspective
   {
+    internal static readonly TreePerspective Component = new TreePerspective("Heap/Component Type/Stack", new TreeAxis[] { TreeAxis.Heap, TreeAxis.ComponentType, TreeAxis.CallStack });
     internal static readonly TreePerspective Default = new TreePerspective("Heap/Stack", new TreeAxis[] { TreeAxis.Heap, TreeAxis.CallStack });
     internal static readonly TreePerspective Reverse = new TreePerspective("Heap/Stack (Reverse)", new TreeAxis[] { TreeAxis.Heap, TreeAxis.CallStackReverse });
     internal static readonly TreePerspective Asset = new TreePerspective("Heap/Asset Type/Asset Path", new TreeAxis[] { TreeAxis.Heap, TreeAxis.AssetType, TreeAxis.AssetPath, TreeAxis.CallStack });
     internal static readonly TreePerspective AssetType = new TreePerspective("Asset Type/Heap", new TreeAxis[] { TreeAxis.AssetType, TreeAxis.Heap });
-    internal static readonly TreePerspective Component = new TreePerspective("Heap/Component Type/Stack", new TreeAxis[] { TreeAxis.Heap, TreeAxis.ComponentType, TreeAxis.CallStack });
 
     internal static readonly TreePerspective[] AllItems = new TreePerspective[] {
+      Component,
       Default,
       Reverse,
       Asset,
       AssetType,
-      Component
     };
 
     internal string Name { get; private set; }
