@@ -406,7 +406,7 @@ namespace MemTrace
               }
               else
               {
-                MetaData.AddWarning("Attempt to allocate already-allocated address {0:x16} size {0:x16}", addr, size);
+                MetaData.AddWarning("Attempt to allocate already-allocated address {0:x16} size {1} bytes", addr, size);
               }
             }
             break;
